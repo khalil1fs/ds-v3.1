@@ -1,0 +1,242 @@
+
+<p-dialog [(visible)]="viewKeyWordDialog" [style]="{width: '70vw'}"
+        header="Key word" [modal]="true"
+        styleClass="p-fluid">
+
+    <ng-template pTemplate="content">
+        <p-tabView>
+            <p-tabPanel header="Key word">
+                <div class="p-grid">
+
+                                <div class="p-field p-col-12 p-md-4">
+                                    <label for="1">Libelle fr</label>
+                                    <input class="p-mb-2 p-mr-2" type="text" pInputText [disabled]="true"
+                                           placeholder="Libelle fr"  [(ngModel)]="selectedKeyWord.libelleFr"
+                                           id="1" [(ngModel)]="selectedKeyWord.libelleFr"
+                                           autofocus>
+                                </div>
+
+
+
+                                <div class="p-field p-col-12 p-md-4">
+                                    <label for="2">Libelle eng</label>
+                                    <input class="p-mb-2 p-mr-2" type="text" pInputText [disabled]="true"
+                                           placeholder="Libelle eng"  [(ngModel)]="selectedKeyWord.libelleEng"
+                                           id="2" [(ngModel)]="selectedKeyWord.libelleEng"
+                                           autofocus>
+                                </div>
+
+
+
+                                <div class="p-field p-col-12 p-md-4">
+                                    <label for="3">Code</label>
+                                    <input class="p-mb-2 p-mr-2" type="text" pInputText [disabled]="true"
+                                           placeholder="Code"  [(ngModel)]="selectedKeyWord.code"
+                                           id="3" [(ngModel)]="selectedKeyWord.code"
+                                           autofocus>
+                                </div>
+
+
+
+                                <div class="p-field align-inputswitch p-col-12  p-md-4">
+                                    <div  class="label-inputswitch">
+                                        <label for="4">Archive</label>
+                                    </div>
+                                    <div class="input-switch">
+                                        <p-inputSwitch id="4"  [disabled]="true" [(ngModel)]="selectedKeyWord.archive"></p-inputSwitch>
+                                    </div>
+                                </div>
+
+
+                                <div class="p-field p-col-12 p-md-4">
+                                    <label for="5">Date archivage</label>
+                                    <p-calendar id="5" [disabled]="true"
+                                                placeholder="Date archivage"  [(ngModel)]="selectedKeyWord.dateArchivage"
+                                            dateFormat="{{dateFormat}}"></p-calendar>
+                                </div>
+
+                                <div class="p-field p-col-12 p-md-4">
+                                    <label for="6">Date creation</label>
+                                    <p-calendar id="6" [disabled]="true"
+                                                placeholder="Date creation"  [(ngModel)]="selectedKeyWord.dateCreation"
+                                            dateFormat="{{dateFormat}}"></p-calendar>
+                                </div>
+
+                                <div class="p-field align-inputswitch p-col-12  p-md-4">
+                                    <div  class="label-inputswitch">
+                                        <label for="7">Admin</label>
+                                    </div>
+                                    <div class="input-switch">
+                                        <p-inputSwitch id="7"  [disabled]="true" [(ngModel)]="selectedKeyWord.admin"></p-inputSwitch>
+                                    </div>
+                                </div>
+
+
+                                <div class="p-field p-col-12 p-md-4">
+                                    <label for="8">Username</label>
+                                    <input class="p-mb-2 p-mr-2" type="text" pInputText [disabled]="true"
+                                           placeholder="Username"  [(ngModel)]="selectedKeyWord.username"
+                                           id="8" [(ngModel)]="selectedKeyWord.username"
+                                           autofocus>
+                                </div>
+
+
+
+                                <div class="p-field align-inputswitch p-col-12  p-md-4">
+                                    <div  class="label-inputswitch">
+                                        <label for="9">Visible</label>
+                                    </div>
+                                    <div class="input-switch">
+                                        <p-inputSwitch id="9"  [disabled]="true" [(ngModel)]="selectedKeyWord.visible"></p-inputSwitch>
+                                    </div>
+                                </div>
+
+
+                </div>
+            </p-tabPanel>
+                <p-tabPanel header="Chercheur" *ngIf="hideTagChercheur">
+                    <div class="p-grid">
+
+                        <div class="p-field p-col-12 p-md-3">
+                            <label for="cherch-12">Username</label>
+                            <input class="p-mb-2 p-mr-2" type="text" pInputText [disabled]="true"
+                                   placeholder="Username"  [(ngModel)]="selectedChercheur.username"
+                                   id="cherch-12"
+                                   autofocus>
+                        </div>
+
+
+
+                        <div class="p-field p-col-12 p-md-3">
+                            <label for="cherch-14">Prenom</label>
+                            <input class="p-mb-2 p-mr-2" type="text" pInputText [disabled]="true"
+                                   placeholder="Prenom"  [(ngModel)]="selectedChercheur.prenom"
+                                   id="cherch-14"
+                                   autofocus>
+                        </div>
+
+                        <div class="p-field p-col-12 p-md-3">
+                            <label for="cherch-15">Nom</label>
+                            <input class="p-mb-2 p-mr-2" type="text" pInputText [disabled]="true"
+                                   placeholder="Nom"  [(ngModel)]="selectedChercheur.nom"
+                                   id="cherch-15"
+                                   autofocus>
+                        </div>
+
+                        <div class="p-field p-col-12 p-md-3">
+                            <label for="cherch-1">Numero matricule</label>
+                            <input class="p-mb-2 p-mr-2" type="text" pInputText [disabled]="true"
+                                   placeholder="Numero matricule"  [(ngModel)]="selectedChercheur.numeroMatricule"
+                                   id="cherch-1"
+                                   autofocus>
+                        </div>
+
+                        <div class="p-field p-col-12 p-md-3">
+                            <label for="cherch-2">Email principale</label>
+                            <input class="p-mb-2 p-mr-2" type="text" pInputText [disabled]="true"
+                                   placeholder="Email principale"   [(ngModel)]="selectedChercheur.emailPrincipale"
+                                   id="cherch-2"
+                                   autofocus>
+                        </div>
+
+                        <div class="p-field align-inputswitch p-col-12  p-md-3">
+                            <div  class="label-inputswitch">
+                                <label for="cherch-4">Formation en management</label>
+                            </div>
+                            <div class="input-switch">
+                                <p-inputSwitch id="cherch-4"  [disabled]="true" [(ngModel)]="selectedChercheur.formationEnManagement"></p-inputSwitch>
+                            </div>
+                        </div>
+
+
+                        <div class="p-field align-inputswitch p-col-12  p-md-3">
+                            <div  class="label-inputswitch">
+                                <label for="cherch-5">Credentials non expired</label>
+                            </div>
+                            <div class="input-switch">
+                                <p-inputSwitch id="cherch-5"  [disabled]="true" [(ngModel)]="selectedChercheur.credentialsNonExpired"></p-inputSwitch>
+                            </div>
+                        </div>
+
+
+                        <div class="p-field align-inputswitch p-col-12  p-md-3">
+                            <div  class="label-inputswitch">
+                                <label for="cherch-6">Enabled</label>
+                            </div>
+                            <div class="input-switch">
+                                <p-inputSwitch id="cherch-6"  [disabled]="true" [(ngModel)]="selectedChercheur.enabled"></p-inputSwitch>
+                            </div>
+                        </div>
+
+
+                        <div class="p-field align-inputswitch p-col-12  p-md-3">
+                            <div  class="label-inputswitch">
+                                <label for="cherch-7">Account non expired</label>
+                            </div>
+                            <div class="input-switch">
+                                <p-inputSwitch id="cherch-7"  [disabled]="true" [(ngModel)]="selectedChercheur.accountNonExpired"></p-inputSwitch>
+                            </div>
+                        </div>
+
+                        <div class="p-field align-inputswitch p-col-12  p-md-3">
+                            <div  class="label-inputswitch">
+                                <label for="cherch-8">Account non locked</label>
+                            </div>
+                            <div class="input-switch">
+                                <p-inputSwitch id="cherch-8"  [disabled]="true" [(ngModel)]="selectedChercheur.accountNonLocked"></p-inputSwitch>
+                            </div>
+                        </div>
+
+                        <div class="p-field align-inputswitch p-col-12  p-md-3">
+                            <div  class="label-inputswitch">
+                                <label for="cherch-9">Password changed</label>
+                            </div>
+                            <div class="input-switch">
+                                <p-inputSwitch id="cherch-9"  [disabled]="true" [(ngModel)]="selectedChercheur.passwordChanged"></p-inputSwitch>
+                            </div>
+                        </div>
+
+                        <div class="p-field p-col-12 p-md-3">
+                            <label for="cherch-10">Created at</label>
+                            <p-calendar id="cherch-10" [disabled]="true"
+                                        placeholder="Created at"  [(ngModel)]="selectedChercheur.createdAt"
+                                    dateFormat="{{dateFormat}}"></p-calendar>
+                        </div>
+
+                        <div class="p-field p-col-12 p-md-3">
+                            <label for="cherch-11">Updated at</label>
+                            <p-calendar id="cherch-11" [disabled]="true"
+                                        placeholder="Updated at"  [(ngModel)]="selectedChercheur.updatedAt"
+                                    dateFormat="{{dateFormat}}"></p-calendar>
+                        </div>
+
+                        <div class="p-field p-col-12 p-md-3">
+                            <label for="cherch-3">Resume</label>
+                            <textarea id="cherch-3" pInputTextarea rows="5" cols="30"
+                                      placeholder="Resume"  [(ngModel)]="selectedChercheur.resume"
+                            ></textarea>
+                        </div>
+
+                    </div>
+                </p-tabPanel>
+
+        </p-tabView>
+
+    </ng-template>
+
+    <ng-template pTemplate="footer" >
+        <div class="p-grid">
+            <div>
+                <button pButton pRipple label="Annuler" icon="pi pi-times"
+                        class="p-button-text" (click)="hideViewDialog()"></button>
+            </div>
+        </div>
+    </ng-template>
+
+
+
+
+</p-dialog>
+
+
+
