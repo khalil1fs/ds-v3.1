@@ -1,1 +1,1 @@
-# exemple-project-v3.1
+# This is a small version of the project was released for open source
